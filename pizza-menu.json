@@ -1,0 +1,72 @@
+[{
+    "_id": {
+      "$oid": "64c6d9a6864e4bc6c997ef3b"
+    },
+    "name": "Margherita",
+    "image": "pizza1.png",
+    "price": "250",
+    "size": "small"
+  },
+  {
+    "_id": {
+      "$oid": "64c6dab7864e4bc6c997ef3e"
+    },
+    "name": "Peporoni",
+    "image": "pizza1.png",
+    "price": "250",
+    "size": "small"
+  },
+  {
+    "_id": {
+      "$oid": "64c6daf1864e4bc6c997ef3f"
+    },
+    "name": "Paneer Veggie",
+    "image": "pizza1.png",
+    "price": "350",
+    "size": "medium"
+  },
+  {
+    "_id": {
+      "$oid": "64c6db21864e4bc6c997ef40"
+    },
+    "name": "Capsicum",
+    "image": "pizza1.png",
+    "price": "350",
+    "size": "medium"
+  },
+  {
+    "_id": {
+      "$oid": "64c6db79864e4bc6c997ef41"
+    },
+    "name": "Cheese Corn",
+    "image": "pizza1.png",
+    "price": "250",
+    "size": "small"
+  },
+  {
+    "_id": {
+      "$oid": "64c6db9a864e4bc6c997ef42"
+    },
+    "name": "BBQ Chicken Pizza",
+    "image": "pizza1.png",
+    "price": "450",
+    "size": "large"
+  },
+  {
+    "_id": {
+      "$oid": "64c6dbdb864e4bc6c997ef43"
+    },
+    "name": "Italian Pizza",
+    "image": "pizza1.png",
+    "price": "450",
+    "size": "large"
+  },
+  {
+    "_id": {
+      "$oid": "64c6dc09864e4bc6c997ef44"
+    },
+    "name": "Tomato",
+    "image": "pizza1.png",
+    "price": "350",
+    "size": "medium"
+  }]
