@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 [+] Create Order controller and link it in server.js
 [+] Create Orders view with table for customer and admin
@@ -10,3 +11,6 @@
     [+] Socket connection
         - dependancies socket.io
 [ ] Build project for deployment
+=======
+..
+>>>>>>> 4f37f6df353d2b17b8faa3ae12262da971ba2fc3
