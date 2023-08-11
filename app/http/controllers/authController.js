@@ -2,6 +2,9 @@ const User = require('../../models/user');
 const passport = require('passport');
 
 function authController(){
+    const _getRedirectUrl = (req) => {
+        return req.user.role === 'admin' ? '/admin/orders' : '/customer/orders'
+    }    //    Agar user ka role admin rhega to admin/orders url work krega or customer rha to customer/orders work krega
     return{
         login(req, res){
             res.render('auth/login');
@@ -24,7 +27,7 @@ function authController(){
                             return next(err);
                         }
 
-                        return res.redirect('/');
+                        return res.redirect(_getRedirectUrl(req ));
                     });
                 } catch (err) {
                     req.flash('error', 'Something went wrong.');

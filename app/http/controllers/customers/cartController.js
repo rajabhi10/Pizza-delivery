@@ -16,7 +16,8 @@ function cartController(){
                     totalPrice:0
                 }
                }
-               let cart = req.session.cart
+               let cart = req.session.cart;
+               const item = req.body;
                //console.log(req.body)
                 // Check if item does not exist in cart
                if(!cart.items[req.body._id]){
@@ -33,10 +34,10 @@ function cartController(){
                     cart.totalPrice = cart.totalPrice + req.body.price
                   }
            
-                return res.json( {totalQty: req.session.cart.totalQty})
+                return res.json( {totalQty: req.session.cart.totalQty});
         }
-    }
+    };
 }
 
-module.exports = cartController
+module.exports = cartController;
 
