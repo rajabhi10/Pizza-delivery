@@ -2,6 +2,7 @@
 const axios = require('axios');
 const Noty = require('noty');
 const initAdmin = require('./admin');
+const moment = require('moment');
 
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const cartCounter = document.querySelector('#cartCounter');
@@ -39,3 +40,32 @@ if(alertMsg) {
     },2000);
 }
 initAdmin();
+
+// Order Status Updation
+
+var status =  document.querySelectorAll('.status_line')
+var hiddenInput = document.querySelector('#hiddenInput')
+var order =  hiddenInput ?  hiddenInput.value : null;
+order = JSON.parse(order)
+var time = document.createElement('small');
+
+ function updateStatus(order){
+    var stepCompleted = true;
+    status.forEach( (statuses) => {
+        var dataGet = statuses.dataset.status
+        if(stepCompleted) {
+            statuses.classList.add('step-completed');
+        }
+        if(dataGet === order.status) {
+            time.innerText = moment(order.updatedAt).format('hh:mm A')
+            statuses.appendChild(time);
+            stepCompleted = false;
+            if(statuses.nextElementSibling){
+            statuses.nextElementSibling.classList.add('current')
+        }
+    }
+    });
+ }
+
+ updateStatus(order);
+

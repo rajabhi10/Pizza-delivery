@@ -35,7 +35,25 @@ function orderController(){
                              res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 
                     res.render('customer/orders', { orders: orders, moment: moment})
+            },
+            async show(req, res) {
+                try {
+                    const orders = await Order.findById(req.params._id);
+            
+                    // Authorize User
+                    if (req.user._id.toString() === orders.customerId.toString()) {
+                        return res.render('customer/singleOrder', { order: orders });
+                    } else {
+                        return res.redirect('/');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    return res.status(500).send('Internal Server Error');
+                }
             }
+            
+            
+            
         }
 }
 

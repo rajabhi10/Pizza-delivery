@@ -17,7 +17,6 @@ function orderController() {
             } catch (error) {
                 // Handle the error here
                 console.error(error);
-             //   res.status(500).send('An error occurred');
             }
         }
     };
