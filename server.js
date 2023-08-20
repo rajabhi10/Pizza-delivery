@@ -71,10 +71,12 @@
         
     // Importing Routes
         require('./routes/web')(app);
+        app.use((req,res) => {
+          res.status(404).send('<h1>404, Page Not Found</h1>')
+        })
 
     app.listen(port, () => {
         console.log(`Listening on port ${port}`);
     });
       
   
-    
